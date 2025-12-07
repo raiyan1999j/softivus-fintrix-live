@@ -1,0 +1,354 @@
+
+        
+        /* Tabs */
+        .tab-button-transaction {
+            padding: 10px 16px;
+            border-radius: 12px;
+            border: none;
+            background: transparent;
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 640px) {
+            .tab-button {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+        }
+
+        .tab-button-transaction:hover {
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .tab-button-transaction.active {
+            color: var(--text);
+            background: var(--bg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tab Dropdown for Mobile */
+        .tab-dropdown-mobile-transaction {
+            /* display: none; */
+            margin-bottom: 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .tab-dropdown-btn-transaction {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--panel);
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .tab-dropdown-btn-transaction:hover {
+            border-color: var(--primary);
+            background: var(--bg);
+        }
+
+        .tab-dropdown-btn-transaction i {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tab-dropdown-mobile-transaction.open .tab-dropdown-btn-transaction i {
+            transform: rotate(180deg);
+        }
+
+        .tab-dropdown-content-transaction {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .tab-dropdown-mobile-transaction.open .tab-dropdown-content-transaction {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .tab-dropdown-item-transaction {
+            width: 100%;
+            padding: 14px 18px;
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-dropdown-item-transaction:last-child {
+            border-bottom: none;
+        }
+
+        .tab-dropdown-item-transaction:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .tab-dropdown-item-transaction.active {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .tab-dropdown-item-transaction i {
+            opacity: 0.7;
+        }
+
+        .tab-dropdown-item-transaction.active i {
+            opacity: 1;
+        }
+
+        /* Badges */
+        
+        /* Stats Card */
+        
+        /* Filter Dropdown */
+        .filter-dropdown-transaction {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 8px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            min-width: 280px;
+            max-width: calc(100vw - 32px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 50;
+        }
+
+        @media (max-width: 640px) {
+            .filter-dropdown {
+                right: auto;
+                left: 0;
+                min-width: calc(100vw - 32px);
+            }
+        }
+
+        .filter-dropdown-transaction.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            z-index: 80;
+        }
+
+        /* Checkbox */
+        .checkbox-wrapper-transaction {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+        }
+
+        .checkbox-transaction {
+            width: 18px;
+            height: 18px;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            cursor: pointer;
+            appearance: none;
+            transition: all 0.3s;
+        }
+
+        .checkbox-transaction:checked {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        /* Date Range Picker */
+        .date-range {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 640px) {
+            .date-range {
+                gap: 12px;
+                padding: 8px 16px;
+            }
+        }
+
+        .date-range:hover {
+            border-color: var(--primary);
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 12px;
+            background: var(--text);
+            color: var(--bg);
+            border-radius: 8px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            margin-bottom: 8px;
+        }
+
+        .tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Chart Container */
+
+        /* Loading State */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--border);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Mobile Bottom Nav */
+       
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .transaction-row > div {
+                width: 100%;
+            }
+
+            .transaction-row .flex.items-center.gap-4 {
+                width: 100%;
+            }
+
+            .transaction-row .grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                width: 100%;
+            }
+
+            .transaction-row .flex.items-center.gap-2 {
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .transaction-row .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Pagination */
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        @media (min-width: 640px) {
+            .pagination {
+                gap: 8px;
+            }
+        }
+
+        .page-button {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--panel);
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        @media (min-width: 640px) {
+            .page-button {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+
+        .page-button:hover {
+            background: var(--border);
+        }
+
+        .page-button.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }

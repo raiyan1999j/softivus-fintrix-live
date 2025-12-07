@@ -1,0 +1,256 @@
+
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    #8b5cf6 50%,
+    #ec4899 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-group {
+  margin: 24px 0;
+}
+
+.nav-group-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  padding: 0 20px 8px;
+  margin-top: 24px;
+}
+
+.sub-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 52px;
+  margin: 2px 12px;
+  border-radius: 12px;
+  color: var(--muted);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sub-nav-item:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.sub-nav-item.active {
+  background: var(--bg);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+
+.badge-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warning);
+}
+
+.badge-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+}
+
+.badge-info {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--info);
+}
+
+.badge-purple {
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+}
+
+.tab-container {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: var(--bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.invoice-row {
+  display: grid;
+  grid-template-columns: 50px 2fr 1.5fr 1fr 1fr 1fr 100px;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.invoice-row:hover {
+  background: var(--bg);
+}
+
+@media (max-width: 1280px) {
+  .invoice-row {
+    grid-template-columns: 50px 2fr 1.5fr 1fr 1fr 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .invoice-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .invoice-row > div {
+    width: 100%;
+  }
+}
+.filter-section-invoice {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-section-invoice:last-child {
+  border-bottom: none;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  appearance: none;
+  background: var(--bg);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox-item input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.checkbox-item label {
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--panel);
+}
+
+select.form-input {
+  cursor: pointer;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--panel);
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

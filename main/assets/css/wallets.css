@@ -1,0 +1,360 @@
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(19, 21, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  z-index: 10;
+}
+
+.menu-section {
+  padding: 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  padding: 0 12px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 4px;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-item:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.menu-item.active {
+  background: var(--primary);
+  color: white;
+}
+
+.menu-item.active .menu-icon {
+  color: white;
+}
+
+.menu-item.has-submenu::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.3s;
+}
+
+.menu-item.has-submenu.open::after {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  margin-left: 28px;
+  margin-top: 4px;
+}
+
+.submenu.open {
+  max-height: 500px;
+}
+
+.submenu-item {
+  padding: 10px 16px;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  transition: all 0.3s;
+  display: block;
+  text-decoration: none;
+}
+
+.submenu-item:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.submenu-item.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.top-bar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(10px);
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.search-box i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+}
+
+.tab-container {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tab-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .tab-container {
+    gap: 8px;
+    padding: 6px;
+  }
+}
+.dropdown-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+@media (min-width: 640px) {
+  .modal-body {
+    padding: 24px;
+  }
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .wallet-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+}
+
+.wallet-card {
+  background: var(--panel);
+  border-radius: 24px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .wallet-card {
+    padding: 24px;
+  }
+}
+
+.wallet-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--info));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.wallet-card:hover::before {
+  opacity: 1;
+}
+
+.wallet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -10px rgba(99, 102, 241, 0.2);
+}
+
+.currency-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Filter Dropdown */
+.filter-dropdown-wallets {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  min-width: 280px;
+  max-width: calc(100vw - 32px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+  z-index: 50;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 8px;
+  transition: width 0.3s;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .wallet-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+
+  .currency-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .form-input,
+  .form-select {
+    font-size: 14px;
+  }
+}

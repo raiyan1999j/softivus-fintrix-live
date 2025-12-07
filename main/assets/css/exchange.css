@@ -1,0 +1,410 @@
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    #8b5cf6 50%,
+    #ec4899 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Badges */
+
+
+.badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.badge-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+.badge-info {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--info);
+}
+
+.badge-neutral {
+  background: var(--border);
+  color: var(--muted);
+}
+
+/* Tabs */
+.tabs-container {
+  display: flex;
+  gap: 8px;
+  background: var(--bg);
+  padding: 6px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  color: var(--text);
+}
+
+.tab-button.active {
+  background: var(--panel);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search */
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 8px;
+  min-width: 200px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+  z-index: 50;
+}
+
+.dropdown.open .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Checkbox */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+}
+
+/* Exchange Converter */
+.exchange-converter {
+  background: var(--panel);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  padding: 32px;
+  position: relative;
+  touch-action: pan-y; /* Allow vertical scrolling but enable horizontal swipe detection */
+  user-select: none; /* Prevent text selection during swipe */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.currency-input-wrapper {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+  touch-action: auto; /* Allow normal touch behavior for inputs */
+}
+
+.currency-input-wrapper:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.currency-input::placeholder {
+  color: var(--muted);
+}
+
+.currency-select:active {
+  transform: scale(0.98);
+  background: var(--border);
+}
+
+.currency-flag {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.swap-button-exchange {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.swap-button-exchange:hover {
+  background: var(--primary-dark);
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.swap-button-exchange:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+/* Rate Card */
+.rate-card {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.rate-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(99, 102, 241, 0.2);
+}
+
+.rate-card.active {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* Exchange History */
+.exchange-row {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s;
+  margin-bottom: 12px;
+}
+
+.exchange-row:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+/* Modal */
+/* Mobile Bottom Nav */
+
+
+/* Responsive */
+@media (max-width: 640px) {
+  .exchange-converter {
+    padding: 20px;
+  }
+
+  .currency-input-wrapper {
+    padding: 16px;
+  }
+
+  .currency-flag {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .swap-button-exchange {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rate-card {
+    padding: 16px;
+  }
+
+  .exchange-row {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+  }
+
+  .exchange-row > div:first-child {
+    width: 100%;
+    padding-right: 40px;
+    margin-bottom: 12px;
+  }
+
+  .exchange-row > div:nth-child(2) {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .exchange-row .btn-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    margin-left: 0;
+  }
+
+  .tabs-container {
+    gap: 4px;
+    padding: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tabs-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-button {
+    padding: 8px 16px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+ 
+
+  .dropdown-content {
+    right: auto;
+    left: 0;
+    min-width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
+  }
+}
+
+@media (min-width: 640px) {
+  .exchange-converter {
+    padding: 24px;
+  }
+
+  .currency-input-wrapper {
+    padding: 20px;
+  }
+
+  .tab-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .rate-card {
+    padding: 18px;
+  }
+
+  .exchange-row {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .exchange-converter {
+    padding: 32px;
+  }
+
+  .currency-input-wrapper {
+    padding: 24px;
+  }
+
+  .rate-card {
+    padding: 20px;
+  }
+
+  .exchange-row {
+    padding: 20px;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Text Colors */
+

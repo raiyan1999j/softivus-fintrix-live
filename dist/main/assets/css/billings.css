@@ -1,0 +1,808 @@
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    #8b5cf6 50%,
+    #ec4899 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.stat-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stat-change.up {
+  color: var(--success);
+}
+
+.stat-change.down {
+  color: var(--danger);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  background: var(--panel);
+  padding: 6px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.tab-btn-billing {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.tab-btn-billing.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary));
+  color: white;
+  box-shadow: 0 4px 12px rgba(var(--primary), 0.3);
+}
+
+/* Tab Dropdown for Mobile */
+.tab-dropdown-mobile-billing {
+  display: none;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.tab-dropdown-btn-billing {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tab-dropdown-btn-billing:hover {
+  border-color: var(--primary);
+  background: var(--bg);
+}
+
+.tab-dropdown-btn-billing i {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-dropdown-mobile-billing.open .tab-dropdown-btn-billing i {
+  transform: rotate(180deg);
+}
+
+.tab-dropdown-content-billing {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.tab-dropdown-mobile-billing.open .tab-dropdown-content-billing {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tab-dropdown-item-billing {
+  width: 100%;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-dropdown-item-billing:last-child {
+  border-bottom: none;
+}
+
+.tab-dropdown-item-billing:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.tab-dropdown-item-billing.active {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.tab-dropdown-item-billing i {
+  opacity: 0.7;
+}
+
+.tab-dropdown-item-billing.active i {
+  opacity: 1;
+}
+
+/* Custom Dropdown in Forms */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.custom-dropdown-btn {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+}
+
+.custom-dropdown-btn:hover {
+  border-color: var(--primary);
+  background: var(--panel);
+}
+
+.custom-dropdown-btn i {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-dropdown.open .custom-dropdown-btn i {
+  transform: rotate(180deg);
+}
+
+.custom-dropdown-content {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  overflow: hidden;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.custom-dropdown.open .custom-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-dropdown-item {
+  width: 100%;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.custom-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.custom-dropdown-item:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.custom-dropdown-item.active {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.custom-dropdown-item i {
+  opacity: 0.7;
+}
+
+.custom-dropdown-item.active i {
+  opacity: 1;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group-billing {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-dropdown-billing {
+  position: relative;
+}
+
+.filter-btn-billing {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.filter-btn-billing:hover {
+  background: var(--bg);
+}
+
+.filter-btn-billing.active {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-menu-billing {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px;
+  min-width: 220px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.filter-dropdown-billing.open .filter-menu-billing {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.filter-option-billing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-option-billing:hover {
+  background: var(--bg);
+}
+
+.filter-checkbox-billing:checked {
+  background: linear-gradient(135deg, var(--primary), #8b5cf6);
+  border-color: var(--primary);
+}
+
+.filter-checkbox-billing:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+.billing-table {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.table-count {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.table-content {
+  overflow-x: auto;
+}
+
+/* Hide mobile cards on desktop */
+.billing-cards-mobile {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--bg);
+}
+
+th {
+  padding: 16px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+tbody tr:hover {
+  background: var(--bg);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 20px 24px;
+  color: var(--text);
+}
+
+.customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.customer-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.customer-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.customer-name {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.customer-email {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.badge-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+.badge-info {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--info);
+}
+
+.badge-purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.amount-cell {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.action-menu {
+  position: relative;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: var(--bg);
+  border-color: var(--primary);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.page-btn:hover {
+  background: var(--bg);
+}
+
+.page-btn.active {
+  background: linear-gradient(135deg, var(--primary), #8b5cf6);
+  color: white;
+  border-color: transparent;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--bg);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  min-height: 100px;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+.modal-footer {
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  /* Show dropdown, hide tabs on mobile */
+  .tab-dropdown-mobile-billing {
+    display: block;
+  }
+
+  .tabs {
+    display: none;
+    align-items: stretch;
+  }
+
+  /* Hide default table on mobile */
+  .table-content table {
+    display: none;
+  }
+
+  /* Show card-based layout on mobile */
+  .billing-cards-mobile {
+    display: block;
+    padding: 16px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pagination-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Mobile Card Layout for Billing Table */
+@media (max-width: 768px) {
+  .billing-card-mobile {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .billing-card-mobile:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+  }
+
+  .billing-card-mobile:last-child {
+    margin-bottom: 0;
+  }
+
+  .billing-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .billing-card-body {
+    display: grid;
+    gap: 12px;
+  }
+
+  .billing-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .billing-card-label {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .billing-card-value {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .billing-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .billing-card-action {
+    display: flex;
+    gap: 8px;
+  }
+
+  .billing-card-action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text);
+  }
+
+  .billing-card-action-btn:hover {
+    background: var(--bg);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}

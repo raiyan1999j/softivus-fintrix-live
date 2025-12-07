@@ -1,0 +1,248 @@
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    #8b5cf6 50%,
+    #ec4899 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.sidebar-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.sidebar-submenu.open {
+  max-height: 500px;
+}
+
+.sidebar-submenu-item {
+  padding: 10px 16px 10px 52px;
+  margin: 2px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.sidebar-submenu-item:hover {
+  background: rgba(99, 102, 241, 0.05);
+  color: var(--primary);
+}
+
+.sidebar-submenu-item.active {
+  color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+  font-weight: 600;
+}
+
+/* Tabs */
+.tab-modern {
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-modern:hover {
+  color: var(--text);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.tab-modern.active {
+  color: white;
+  background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+  box-shadow: 0 8px 24px -8px rgba(99, 102, 241, 0.4);
+}
+
+/* Badges */
+
+/* Link Card */
+.link-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px -12px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Stat Card */
+
+/* Modal */
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 48px;
+  height: 28px;
+  background: var(--border);
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-switch.active {
+  background: var(--primary);
+}
+
+.toggle-switch-handle {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all 0.3s;
+}
+
+.toggle-switch.active .toggle-switch-handle {
+  left: 23px;
+}
+
+/* Checkbox */
+.checkbox-modern {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.checkbox-modern.checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox-modern.checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Utilities */
+
+/* Mobile Bottom Nav */
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+  
+
+  .link-card {
+    padding: 16px;
+  }
+
+  .tab-modern {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .toggle-switch {
+    width: 44px;
+    height: 24px;
+  }
+
+  .toggle-switch-handle {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 2px;
+  }
+
+  .toggle-switch.active .toggle-switch-handle {
+    left: 20px;
+  }
+}
+
+@media (min-width: 640px) {
+  
+
+  .link-card {
+    padding: 20px;
+  }
+
+  .tab-modern {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .link-card {
+    padding: 24px;
+  }
+}
+
+/* Hide scrollbar for tabs */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Progress Bar */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, #8b5cf6 100%);
+  border-radius: 4px;
+  transition: width 0.3s;
+}

@@ -1,0 +1,83 @@
+/* payment link */
+.btn-icon-paymentLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 28px 28px;
+}
+
+.btn-icon-paymentLink:hover {
+  background: var(--bg);
+}
+
+.btn-icon-paymentLink i {
+  font-size: 18px;
+  color: var(--text);
+  transition: all 0.3s;
+}
+
+.btn-icon-paymentLink i:hover {
+  color: var(--primary);
+}
+
+.tab-modern.active > .badge-modern {
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+/* customerlistSearchBox */
+.customerlistSearchBox {
+  max-width: none;
+}
+
+/* invoice */
+/* .invoiceSearchBox {
+    margin-bottom: 0px;
+} */
+
+/* index */
+.currency-row-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-icon-index {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel, #f8f9fa);
+  border: 1px solid var(--border, #e2e8f0);
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.btn-icon-index:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* analytics */
+.chart-container-additional {
+  position: relative;
+  height: 350px;
+  padding: 24px;
+}

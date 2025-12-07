@@ -1,0 +1,453 @@
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    #8b5cf6 50%,
+    #ec4899 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+.top-header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(20px);
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 480px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.search-box i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+
+
+/* Tab Dropdown for Mobile */
+.tab-dropdown-mobile-customerlist {
+  display: none;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.tab-dropdown-btn-customerlist {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tab-dropdown-btn-customerlist:hover {
+  border-color: var(--primary);
+  background: var(--bg);
+}
+
+.tab-dropdown-btn-customerlist i {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-dropdown-mobile-customerlist.open .tab-dropdown-btn-customerlist i {
+  transform: rotate(180deg);
+}
+
+.tab-dropdown-content-customerlist {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.tab-dropdown-mobile-customerlist.open .tab-dropdown-content-customerlist {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tab-dropdown-item-customerlist {
+  width: 100%;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-dropdown-item-customerlist:last-child {
+  border-bottom: none;
+}
+
+.tab-dropdown-item-customerlist:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.tab-dropdown-item-customerlist.active {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.tab-dropdown-item-customerlist i {
+  opacity: 0.7;
+}
+
+.tab-dropdown-item-customerlist.active i {
+  opacity: 1;
+}
+
+.badge-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warning);
+}
+
+.badge-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--danger);
+}
+
+.badge-info {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--info);
+}
+
+.badge-purple {
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+}
+
+.customer-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+.customer-row:hover {
+  background: var(--bg);
+}
+
+.customer-row:last-child {
+  border-bottom: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.checkbox-custom:hover {
+  border-color: var(--primary);
+}
+
+.checkbox-custom.checked {
+  background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+  border-color: var(--primary);
+}
+
+.checkbox-custom.checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}
+
+.filter-section {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+}
+
+.filter-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-option:hover {
+  color: var(--primary);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.modal-footer {
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+@media (max-width: 768px) {
+  /* Show dropdown, hide tabs on mobile */
+  .tab-dropdown-mobile-customerlist {
+    display: block;
+  }
+
+  .tab-buttons {
+    display: none;
+  }
+
+  .top-header {
+    padding: 16px 20px;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+
+  .customer-row {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+
+  .customer-row > div {
+    width: 100% !important;
+    min-width: unset !important;
+    flex: unset !important;
+  }
+
+  .customer-row > div[style*="flex: 2"] {
+    order: 1;
+  }
+
+  .customer-row > div[style*="flex: 1.5"] {
+    order: 2;
+  }
+
+  .customer-row > div:nth-child(4),
+  .customer-row > div:nth-child(5) {
+    display: flex;
+    gap: 8px;
+  }
+
+  .customer-row > div:nth-child(6) {
+    order: 3;
+  }
+
+  .customer-row > div:nth-child(7) {
+    order: 4;
+  }
+
+  .customer-row > div:last-child {
+    order: 5;
+    width: auto !important;
+    align-self: flex-end;
+  }
+
+  .tab-buttons {
+    gap: 4px;
+    padding: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tab-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .search-box input {
+    padding: 10px 12px 10px 36px;
+    font-size: 14px;
+  }
+
+  .search-box i {
+    left: 12px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .modal-footer {
+    padding: 20px;
+  }
+
+  .form-input,
+  .form-select {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 640px) {
+
+  .modal-body {
+    padding: 24px;
+  }
+
+  .modal-footer {
+    padding: 24px;
+  }
+}
+
+/* Hide scrollbar for tabs */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
