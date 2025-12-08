@@ -1326,9 +1326,6 @@
   .bg-bg {
     background-color: var(--color-bg);
   }
-  .bg-black {
-    background-color: var(--color-black);
-  }
   .bg-blue-50 {
     background-color: var(--color-blue-50);
   }
@@ -3428,6 +3425,11 @@
   .lg\:mb-8 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:ml-\[35\%\] {
+    @media (width >= 64rem) {
+      margin-left: 35%;
     }
   }
   .lg\:flex {
