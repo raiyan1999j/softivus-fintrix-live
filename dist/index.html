@@ -69,7 +69,7 @@
     <!-- hero section -->
     <section
       id="hero"
-      class="relative mb-24 overflow-hidden px-6 lg:h-[calc(100vh-65px)]"
+      class="relative mb-24 overflow-hidden px-6 pt-20 lg:pt-32"
     >
       <!-- ⭐ Background Animation -->
       <canvas
@@ -79,11 +79,15 @@
 
       <!-- ⭐ Hero Grid Content -->
       <div
-        class="relative z-10 grid grid-cols-1 items-center gap-6 lg:grid-cols-3"
+        class="relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12"
       >
         <!-- Left Content -->
-        <div class="order-2 col-span-1 flex flex-col lg:order-1">
-          <h1 class="my-4 text-4xl font-extrabold text-black dark:text-white">
+        <div
+          class="order-2 col-span-1 flex flex-col items-center justify-center text-center lg:order-1 lg:col-span-5 lg:items-start lg:pr-8 lg:text-left"
+        >
+          <h1
+            class="my-4 text-4xl font-extrabold text-black lg:text-5xl lg:leading-tight dark:text-white"
+          >
             A Complete Admin UI Kit built on <br />
             <span
               class="animated-gradient bg-linear-to-bl from-violet-500 to-fuchsia-500 bg-clip-text text-transparent"
@@ -92,14 +96,15 @@
             </span>
           </h1>
 
-          <p>
+          <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">
             Fintrix is a versatile HTML 5 and TailwindCSS v4 UI Kit featuring
-            components, <br />
-            dashboards, cards, datacharts, and app templates to help you build
-            applications faster than ever.
+            components, dashboards, cards, datacharts, and app templates to help
+            you build applications faster than ever.
           </p>
 
-          <span class="my-4 flex flex-wrap items-center gap-4">
+          <span
+            class="flex flex-wrap items-center justify-center gap-4 lg:justify-start"
+          >
             <!-- Live Demo Button -->
             <a href="#templates">
               <button>
@@ -136,873 +141,1023 @@
           </span>
         </div>
 
-        <!-- Right Video Area -->
-        <div class="order-1 col-span-2 lg:order-2">
+        <!-- Right Image Area -->
+        <div
+          class="relative order-1 col-span-1 flex items-center justify-center lg:order-2 lg:col-span-7"
+        >
+          <!-- Blob Background -->
           <div
-            class="flex w-full items-center justify-center overflow-hidden rounded-xl lg:h-[calc(100vh-65px)]"
-          >
-            <iframe
-              src="https://www.youtube.com/embed/shKexhiJ2x8?autoplay=1&mute=1"
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              class="aspect-video w-full"
-            ></iframe>
-          </div>
+            class="absolute -inset-4 -z-10 rounded-full bg-linear-to-r from-violet-500/30 to-fuchsia-500/30 blur-3xl"
+          ></div>
+
+          <img
+            src="./assets/images/projectImg.png"
+            alt="Dashboard Preview"
+            class="h-auto w-full transform rounded-2xl object-contain shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+          />
         </div>
       </div>
     </section>
 
-    <!-- details section -->
-    <section class="mx-auto w-[90%] sm:w-[80%] lg:max-w-[70%]">
-      <!-- features section -->
-      <section id="features" class="">
-        <h2 class="my-8 text-center text-xl">
-          <span class="text-3xl font-bold">Fintrix?</span> All you need to build
-          amazing web apps effortlessly.
-        </h2>
-        <div
-          class="grid grid-cols-1 items-center justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/features.webp" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            
-            <h3 class="text-xl font-bold">Multi‑Currency Wallets & Transactions</h3>
-            <p class="text-sm">
-              Allow users to hold, send, receive and exchange in different currencies (USD, EUR, GBP, JPY, etc.) with live FX rate support.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/features-layouts.webp" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">All-in-One Dashboard</h3>
-            <p class="text-sm">
-              A unified dashboard showing wallet balances, revenues, total payments, active customers, pending invoices — gives a quick overview of financial health at a glance.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/features-responsive.webp" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Real-Time Analytics & Reporting</h3>
-            <p class="text-sm">
-             Visual reports of revenue, payments, transactions over time (week/month/year) to help users monitor performance and make informed decisions.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/easyInvoice.jpg" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Easy Invoicing & Billing Management</h3>
-            <p class="text-sm">
-              Create and send invoices, manage billings and products, track payments and pending invoices — ideal for businesses managing clients and receivables.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/flexiblePayment.jpg" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Flexible Payment Methods & Payment Links</h3>
-            <p class="text-sm">
-              Support for different payment methods and ability to generate payment links for easy billing/payment collection.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/transactionHistory.jpg" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Transaction History with Export Options</h3>
-            <p class="text-sm">
-              Detailed transaction logs with filters (status, type, etc.) and export options (CSV, PDF, Excel) for record‑keeping or reporting.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/securityAuth.jpg" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Security & User Authentication</h3>
-            <p class="text-sm">
-              Secure login and identity verification to protect user data and transactions (MFA / strong authentication, industry‑standard data security) — essential for fintech trust.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/responsiveInterface.jpg" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Responsive & User-friendly Interface</h3>
-            <p class="text-sm">
-              Clean, intuitive UI/UX to ensure users (businesses or individuals) can smoothly navigate, manage finances and transactions across devices.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/notificationAlert.jpg" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Notifications & Alerts</h3>
-            <p class="text-sm">
-              Real-time alerts for new payments received, invoices paid, low balance or other important account activity so users stay informed.
-            </p>
-          </div>
-
-          <div class="feature-card">  
-            <div class="h-[248px] w-full">
-              <img src="./assets/images/integration.jpg" alt="image" class="h-full w-full object-cover"/>
-            </div>
-            <h3 class="text-xl font-bold">Integration & Connectivity Options</h3>
-            <p class="text-sm">
-              Ability to connect external accounts or services (e.g. bank accounts, payment processors) and integrations for expanded functionality — useful for businesses needing complex financial workflows.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Technology -->
-      <section id="technologies" class="my-24">
-        <h2 class="mb-4 text-center text-4xl font-bold">Core Technology</h2>
-        <p class="mx-auto mb-8 max-w-md text-center">
-          Fintrix is built with the following core technologies:
-        </p>
-        <div
-          class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-        >
-          <div class="page-card group">
-            <i
-              class="fa-brands fa-html5 hover-rotate text-5xl text-red-500"
-            ></i>
-            <h3 class="my-2 text-lg font-bold lg:text-xl">HTML</h3>
-            <p class="text-sm md:text-base">
-              HTML is the standard markup language for creating web pages.
-            </p>
-          </div>
-          <div class="page-card group">
-            <i
-              class="fa-brands fa-css3 hover-rotate text-5xl text-blue-500"
-            ></i>
-            <h3 class="my-2 text-lg font-bold lg:text-xl">CSS</h3>
-            <p class="text-sm md:text-base">
-              CSS is a language used to style and layout web pages.
-            </p>
-          </div>
-          <div class="page-card group">
-            <img
-              src="./assets/icons/icons8-tailwind-css-48.png "
-              alt="Tailwind CSS"
-              class="hover-rotate h-10 w-10 sm:h-14 sm:w-14"
-            />
-            <h3 class="my-2 text-lg font-bold lg:text-xl">Tailwind CSS</h3>
-            <p class="text-sm md:text-base">
-              Tailwind CSS is a utility-first CSS framework.
-            </p>
-          </div>
-          <div class="page-card group">
-            <i
-              class="fa-brands fa-square-js hover-rotate text-5xl text-yellow-500"
-            ></i>
-            <h3 class="my-2 text-lg font-bold lg:text-xl">JavaScript</h3>
-            <p class="text-sm md:text-base">
-              JavaScript is a language for adding dynamic features to web pages.
-            </p>
-          </div>
-          <div class="page-card group">
-            <i
-              class="fa-solid fa-icons hover-rotate text-5xl text-green-500"
-            ></i>
-            <h3 class="my-2 text-lg font-bold lg:text-xl">Lucid Icons</h3>
-            <p class="text-sm md:text-base">
-              Lucid Icons is a free collection of open-source icons for apps.
-            </p>
-          </div>
-          <div class="page-card group">
-            <img
-              src="./assets/icons/webpack-svgrepo-com.svg"
-              alt="React"
-              class="hover-rotate h-12 w-12 sm:h-14 sm:w-14"
-            />
-            <h3 class="my-2 text-lg font-bold lg:text-xl">Webpack</h3>
-            <p class="text-sm md:text-base">
-              Webpack is a tool that bundles JavaScript modules into one file.
-            </p>
-          </div>
-          <div class="page-card group">
-            <img
-              src="./assets/icons/Chartjs--Streamline-Svg-Logos.svg"
-              alt="React"
-              class="hover-rotate h-10 w-10 sm:h-14 sm:w-14"
-            />
-            <h3 class="my-2 text-lg font-bold lg:text-xl">Chart.js</h3>
-            <p class="text-sm md:text-base">
-              Chart.js is a JavaScript library for building user interfaces.
-            </p>
-          </div>
-
-          <div class="page-card group">
-            <img
-              src="./assets/icons/google-fonts-seeklogo.png"
-              alt="Google Fonts"
-              class="hover-rotate h-10 w-10 sm:h-12 sm:w-12"
-            />
-            <h3 class="my-2 text-lg font-bold lg:text-xl">Google Fonts</h3>
-            <p class="text-sm md:text-base">
-              Google Fonts is Google’s free collection of fonts.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Template -->
-      <section id="templates" class="mt-24">
-        <h2 class="mb-4 text-center text-4xl font-bold">Template</h2>
-        <p class="mx-auto mb-8 max-w-md text-center">
-          Fintrix is built with the following core technologies:
-        </p>
-        <div
-          class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-        >
-          <div class="row-span-8">
-            <ul id="template-list" class="tabs sticky top-20 space-y-2">
-              <li
-                class="active hover:text-primary flex w-full cursor-pointer items-center gap-2 rounded-xl px-6 py-2 text-lg font-bold transition-all duration-300 ease-in-out"
-                id="lightMode"
-              >
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                    />
-                  </svg>
-                </span>
-                <span>Light</span>
-              </li>
-              <li
-                class="hover:text-primary flex w-full cursor-pointer items-center gap-2 rounded-xl px-6 py-2 text-lg font-bold transition-all duration-300 ease-in-out"
-                id="darkMode"
-              >
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-                    />
-                  </svg>
-                </span>
-                <span>Dark</span>
-              </li>
-            </ul>
-          </div>
-          <!-- for light page -->
-
-          <!-- dashboard -->
-          <a href="../main/index.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/dashboardLight.png"
-                alt="Dashboard"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Dashboard</h3>
-              <p class="text-sm">
-                Amazing admin dashboard template for modern web applications.
-              </p>
-            </div>
-          </a>
-          <!-- analytics -->
-          <a href="../main/analytics.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/lightPage/analyticsLight.png"
-                alt="Analytics"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Analytics</h3>
-              <p class="text-sm">
-                Check your card details and manage your cards easily.
-              </p>
-            </div>
-          </a>
-          <!-- transactions -->
-          <a href="../main/transaction.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/transactionLight.png"
-                alt="Transactions"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Transactions</h3>
-              <p class="text-sm">
-                View and manage your transaction history with ease.
-              </p>
-            </div>
-          </a>
-          <!-- wallets -->
-          <a href="../main/wallets.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/analyticsLight.png"
-                alt="Wallets"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Wallets</h3>
-              <p class="text-sm">
-                Set and track your financial goals effectively.
-              </p>
-            </div>
-          </a>
-          <!-- exchange -->
-          <a href="../main/exchange.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/lightPage/exchangeLight.png"
-                alt="Exchange"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Exchange</h3>
-              <p class="text-sm">Exchange your currency with ease.</p>
-            </div>
-          </a>
-          <!-- payments -->
-          <a href="../main/payments.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/paymentsLight.png"
-                alt="Payments"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Payments</h3>
-              <p class="text-sm">Make payments with ease.</p>
-            </div>
-          </a>
-          <!-- payment links -->
-          <a
-            href="../main/paymentslink.html"
-            target="_blank"
-            class="lightPages"
+    <div class="bg-bg relative z-10">
+      <!-- details section -->
+      <section class="mx-auto w-[90%] sm:w-[80%] lg:max-w-[70%]">
+        <!-- features section -->
+        <section id="features" class="">
+          <h2 class="my-8 text-center text-xl">
+            <span class="text-3xl font-bold">Fintrix?</span> All you need to
+            build amazing web apps effortlessly.
+          </h2>
+          <div
+            class="grid grid-cols-1 items-center justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/paymentlinksLight.png"
-                alt="Payment Links"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Payment Links</h3>
-              <p class="text-sm">
-                Create and manage payment links to control your spending.
-              </p>
-            </div>
-          </a>
-          <!-- customer list -->
-          <a
-            href="../main/customerlist.html"
-            target="_blank"
-            class="lightPages"
-          >
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/lightPage/customerlistLight.png"
-                alt="Customer List"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Customer List</h3>
-              <p class="text-sm">
-                View and manage your customer list with ease.
-              </p>
-            </div>
-          </a>
-          <!-- new customer list -->
-          <a href="../main/newcustomer.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/newcustomerlistLight.png"
-                alt="New Customer"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">New Customer</h3>
-              <p class="text-sm">Add new customers to your customer list.</p>
-            </div>
-          </a>
-          <!-- invoices -->
-          <a href="../main/invoice.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/invoiceLight.png"
-                alt="Invoice"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Invoice</h3>
-              <p class="text-sm">View and manage your invoices with ease.</p>
-            </div>
-          </a>
-          <!-- products -->
-          <a href="../main/products.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/lightPage/productsLight.png"
-                alt="Products"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Products</h3>
-              <p class="text-sm">View and manage your products with ease.</p>
-            </div>
-          </a>
-          <!-- connections -->
-          <a href="../main/connections.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/connectionLight.png"
-                alt="Connections"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Connections</h3>
-              <p class="text-sm">
-                Read article and learn about the latest trends.
-              </p>
-            </div>
-          </a>
-          <!-- people -->
-          <a href="../main/people.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/peopleLight.png"
-                alt="Login"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">People</h3>
-              <p class="text-sm">Manage whom with you connected</p>
-            </div>
-          </a>
-          <!-- settings -->
-          <a href="../main/setting.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/settingLight.png"
-                alt="Register"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Settings</h3>
-              <p class="text-sm">Manage your account settings.</p>
-            </div>
-          </a>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/features.webp"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
 
-          <!-- login -->
-          <a href="../main/loginpage.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/loginpageLight.png"
-                alt="Login"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Login</h3>
-              <p class="text-sm">Login to your account.</p>
-            </div>
-          </a>
-
-          <!-- registration -->
-          <a href="../main/registration.html" target="_blank" class="lightPages">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/lightPage/registrationLight.png"
-                alt="Register"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Registration</h3>
-              <p class="text-sm">Register to your account.</p>
-            </div>
-          </a>
-
-          <!-- for dark page -->
-          <!-- dashboard -->
-          <a href="../main/index.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/dashboarDark.png"
-                alt="Dashboard"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Dashboard</h3>
+              <h3 class="text-xl font-bold">
+                Multi‑Currency Wallets & Transactions
+              </h3>
               <p class="text-sm">
-                Amazing admin dashboard template for modern web applications.
+                Allow users to hold, send, receive and exchange in different
+                currencies (USD, EUR, GBP, JPY, etc.) with live FX rate support.
               </p>
             </div>
-          </a>
-          <!-- analytics -->
-          <a href="../main/analytics.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/darkPage/analyticsDark.png"
-                alt="Analytics"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Analytics</h3>
-              <p class="text-sm">
-                Check your card details and manage your cards easily.
-              </p>
-            </div>
-          </a>
-          <!-- transactions -->
-          <a href="../main/transaction.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/transactionDark.png"
-                alt="Transactions"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Transactions</h3>
-              <p class="text-sm">
-                View and manage your transaction history with ease.
-              </p>
-            </div>
-          </a>
-          <!-- wallets -->
-          <a href="../main/wallets.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/walletsDark.png"
-                alt="Wallets"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Wallets</h3>
-              <p class="text-sm">
-                Set and track your financial goals effectively.
-              </p>
-            </div>
-          </a>
-          <!-- exchange -->
-          <a href="../main/exchange.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/darkPage/exchangeDark.png"
-                alt="Exchange"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Exchange</h3>
-              <p class="text-sm">Exchange your currency with ease.</p>
-            </div>
-          </a>
-          <!-- payments -->
-          <a href="../main/payments.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/paymentsDark.png"
-                alt="Payments"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Payments</h3>
-              <p class="text-sm">Make payments with ease.</p>
-            </div>
-          </a>
-          <!-- payment links -->
-          <a
-            href="../main/paymentslink.html"
-            target="_blank"
-            class="darkPages hidden"
-          >
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/paymentlinksDark.png"
-                alt="Payment Links"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Payment Links</h3>
-              <p class="text-sm">
-                Create and manage payment links to control your spending.
-              </p>
-            </div>
-          </a>
-          <!-- customer list -->
-          <a
-            href="../main/customerlist.html"
-            target="_blank"
-            class="darkPages hidden"
-          >
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/darkPage/customerlistDark.png"
-                alt="Customer List"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Customer List</h3>
-              <p class="text-sm">
-                View and manage your customer list with ease.
-              </p>
-            </div>
-          </a>
-          <!-- new customer list -->
-          <a href="../main/newcustomer.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/newcustomerlistDark.png"
-                alt="New Customer"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">New Customer</h3>
-              <p class="text-sm">Add new customers to your customer list.</p>
-            </div>
-          </a>
-          <!-- invoices -->
-          <a href="../main/invoice.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/invoiceDark.png"
-                alt="Invoice"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Invoice</h3>
-              <p class="text-sm">View and manage your invoices with ease.</p>
-            </div>
-          </a>
-          <!-- products -->
-          <a href="../main/products.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:-rotate-2">
-              <img
-                src="./assets/images/darkPage/productsDark.png"
-                alt="Products"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Products</h3>
-              <p class="text-sm">View and manage your products with ease.</p>
-            </div>
-          </a>
-          <!-- connections -->
-          <a href="../main/connections.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/connectionDark.png"
-                alt="Connections"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Connections</h3>
-              <p class="text-sm">
-                Read article and learn about the latest trends.
-              </p>
-            </div>
-          </a>
-          <!-- people -->
-          <a href="../main/people.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/peopleDark.png"
-                alt="Login"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">People</h3>
-              <p class="text-sm">Manage whom with you connected</p>
-            </div>
-          </a>
-          <!-- settings -->
-          <a href="../main/setting.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/settingDark.png"
-                alt="Settings"
-              />
-            </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Settings</h3>
-              <p class="text-sm">Manage your account settings.</p>
-            </div>
-          </a>
 
-          <!-- login -->
-          <a href="../main/loginpage.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/loginpageDark.png"
-                alt="Login"
-              />
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/features-layouts.webp"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">All-in-One Dashboard</h3>
+              <p class="text-sm">
+                A unified dashboard showing wallet balances, revenues, total
+                payments, active customers, pending invoices — gives a quick
+                overview of financial health at a glance.
+              </p>
             </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Login</h3>
-              <p class="text-sm">Login to your account.</p>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/features-responsive.webp"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Real-Time Analytics & Reporting</h3>
+              <p class="text-sm">
+                Visual reports of revenue, payments, transactions over time
+                (week/month/year) to help users monitor performance and make
+                informed decisions.
+              </p>
             </div>
-          </a>
-
-          <!-- registration -->
-          <a href="../main/registration.html" target="_blank" class="darkPages hidden">
-            <div class="card-effect hover:rotate-2">
-              <img
-                src="./assets/images/darkPage/registrationDark.png"
-                alt="Registration"
-              />
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/easyInvoice.jpg"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">
+                Easy Invoicing & Billing Management
+              </h3>
+              <p class="text-sm">
+                Create and send invoices, manage billings and products, track
+                payments and pending invoices — ideal for businesses managing
+                clients and receivables.
+              </p>
             </div>
-            <div
-              class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
-            >
-              <h3 class="text-lg font-bold lg:text-xl">Registration</h3>
-              <p class="text-sm">Register to your account.</p>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/flexiblePayment.jpg"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">
+                Flexible Payment Methods & Payment Links
+              </h3>
+              <p class="text-sm">
+                Support for different payment methods and ability to generate
+                payment links for easy billing/payment collection.
+              </p>
             </div>
-          </a>
-        </div>
-      </section>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/transactionHistory.jpg"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">
+                Transaction History with Export Options
+              </h3>
+              <p class="text-sm">
+                Detailed transaction logs with filters (status, type, etc.) and
+                export options (CSV, PDF, Excel) for record‑keeping or
+                reporting.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/securityAuth.jpg"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Security & User Authentication</h3>
+              <p class="text-sm">
+                Secure login and identity verification to protect user data and
+                transactions (MFA / strong authentication, industry‑standard
+                data security) — essential for fintech trust.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/responsiveInterface.jpg"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">
+                Responsive & User-friendly Interface
+              </h3>
+              <p class="text-sm">
+                Clean, intuitive UI/UX to ensure users (businesses or
+                individuals) can smoothly navigate, manage finances and
+                transactions across devices.
+              </p>
+            </div>
 
-      <!-- Ready To Get Started -->
-      <section
-        id="pricing"
-        class="relative mx-auto mb-24 w-full rounded-xl bg-cover bg-center bg-no-repeat py-6 md:h-[45vh] md:py-0"
-        style="
-          background-image: url(&quot;./assets/images/bg-get-started.webp&quot;);
-        "
-      >
-        <!-- Overlay -->
-        <div class="absolute inset-0 rounded-xl bg-white/10"></div>
-        <div class="flex h-full items-center justify-center">
-          <div class="z-50 px-2 text-center sm:px-0">
-            <h2
-              class="animated-gradient bg-linear-to-bl from-violet-500 to-fuchsia-500 bg-clip-text text-center text-4xl font-bold text-transparent"
-            >
-              Ready To Get Started
-            </h2>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/notificationAlert.jpg"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Notifications & Alerts</h3>
+              <p class="text-sm">
+                Real-time alerts for new payments received, invoices paid, low
+                balance or other important account activity so users stay
+                informed.
+              </p>
+            </div>
 
-            <p class="mx-auto my-6 max-w-md text-center">
-              With Fintrix, building modern, scalable dashboard is a breeze.
-              Enjoy lightning-fast performance and smooth efficiency to bring
-              your project!
-            </p>
-            <div class="flex items-center justify-center">
-              <a href="https://themeforest.net/user/pixelaxis" target="_blank">
-                <button type="button" class="btn">
-                  <strong>Get Now</strong>
-                  <div id="container-stars">
-                    <div id="stars"></div>
-                  </div>
-
-                  <div id="glow">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                  </div>
-                </button>
-              </a>
+            <div class="feature-card">
+              <div class="h-[248px] w-full">
+                <img
+                  src="./assets/images/integration.jpg"
+                  alt="image"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">
+                Integration & Connectivity Options
+              </h3>
+              <p class="text-sm">
+                Ability to connect external accounts or services (e.g. bank
+                accounts, payment processors) and integrations for expanded
+                functionality — useful for businesses needing complex financial
+                workflows.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Footer -->
-      <footer
-        class="flex items-center justify-between border-t border-gray-800 py-8"
-      >
-        <div class="flex items-center gap-2">
-          <h5 class="text-xs font-bold text-white sm:text-sm md:text-lg">
-            Fintrix
-          </h5>
-        </div>
-        <div>
-          <p class="text-xs sm:text-sm md:text-lg">
-            © 2025 Fintrix. All rights reserved.
+        <!-- Technology -->
+        <section id="technologies" class="my-24">
+          <h2 class="mb-4 text-center text-4xl font-bold">Core Technology</h2>
+          <p class="mx-auto mb-8 max-w-md text-center">
+            Fintrix is built with the following core technologies:
           </p>
-        </div>
-      </footer>
-    </section>
+          <div
+            class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          >
+            <div class="page-card group">
+              <i
+                class="fa-brands fa-html5 hover-rotate text-5xl text-red-500"
+              ></i>
+              <h3 class="my-2 text-lg font-bold lg:text-xl">HTML</h3>
+              <p class="text-sm md:text-base">
+                HTML is the standard markup language for creating web pages.
+              </p>
+            </div>
+            <div class="page-card group">
+              <i
+                class="fa-brands fa-css3 hover-rotate text-5xl text-blue-500"
+              ></i>
+              <h3 class="my-2 text-lg font-bold lg:text-xl">CSS</h3>
+              <p class="text-sm md:text-base">
+                CSS is a language used to style and layout web pages.
+              </p>
+            </div>
+            <div class="page-card group">
+              <img
+                src="./assets/icons/icons8-tailwind-css-48.png "
+                alt="Tailwind CSS"
+                class="hover-rotate h-10 w-10 sm:h-14 sm:w-14"
+              />
+              <h3 class="my-2 text-lg font-bold lg:text-xl">Tailwind CSS</h3>
+              <p class="text-sm md:text-base">
+                Tailwind CSS is a utility-first CSS framework.
+              </p>
+            </div>
+            <div class="page-card group">
+              <i
+                class="fa-brands fa-square-js hover-rotate text-5xl text-yellow-500"
+              ></i>
+              <h3 class="my-2 text-lg font-bold lg:text-xl">JavaScript</h3>
+              <p class="text-sm md:text-base">
+                JavaScript is a language for adding dynamic features to web
+                pages.
+              </p>
+            </div>
+            <div class="page-card group">
+              <i
+                class="fa-solid fa-icons hover-rotate text-5xl text-green-500"
+              ></i>
+              <h3 class="my-2 text-lg font-bold lg:text-xl">Lucid Icons</h3>
+              <p class="text-sm md:text-base">
+                Lucid Icons is a free collection of open-source icons for apps.
+              </p>
+            </div>
+            <div class="page-card group">
+              <img
+                src="./assets/icons/webpack-svgrepo-com.svg"
+                alt="React"
+                class="hover-rotate h-12 w-12 sm:h-14 sm:w-14"
+              />
+              <h3 class="my-2 text-lg font-bold lg:text-xl">Webpack</h3>
+              <p class="text-sm md:text-base">
+                Webpack is a tool that bundles JavaScript modules into one file.
+              </p>
+            </div>
+            <div class="page-card group">
+              <img
+                src="./assets/icons/Chartjs--Streamline-Svg-Logos.svg"
+                alt="React"
+                class="hover-rotate h-10 w-10 sm:h-14 sm:w-14"
+              />
+              <h3 class="my-2 text-lg font-bold lg:text-xl">Chart.js</h3>
+              <p class="text-sm md:text-base">
+                Chart.js is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+
+            <div class="page-card group">
+              <img
+                src="./assets/icons/google-fonts-seeklogo.png"
+                alt="Google Fonts"
+                class="hover-rotate h-10 w-10 sm:h-12 sm:w-12"
+              />
+              <h3 class="my-2 text-lg font-bold lg:text-xl">Google Fonts</h3>
+              <p class="text-sm md:text-base">
+                Google Fonts is Google’s free collection of fonts.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Template -->
+        <section id="templates" class="mt-24">
+          <h2 class="mb-4 text-center text-4xl font-bold">Template</h2>
+          <p class="mx-auto mb-8 max-w-md text-center">
+            Fintrix is built with the following core technologies:
+          </p>
+          <div
+            class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          >
+            <div class="row-span-8">
+              <ul id="template-list" class="tabs sticky top-20 space-y-2">
+                <li
+                  class="active hover:text-primary flex w-full cursor-pointer items-center gap-2 rounded-xl px-6 py-2 text-lg font-bold transition-all duration-300 ease-in-out"
+                  id="lightMode"
+                >
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                      />
+                    </svg>
+                  </span>
+                  <span>Light</span>
+                </li>
+                <li
+                  class="hover:text-primary flex w-full cursor-pointer items-center gap-2 rounded-xl px-6 py-2 text-lg font-bold transition-all duration-300 ease-in-out"
+                  id="darkMode"
+                >
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                      />
+                    </svg>
+                  </span>
+                  <span>Dark</span>
+                </li>
+              </ul>
+            </div>
+            <!-- for light page -->
+
+            <!-- dashboard -->
+            <a href="../main/index.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/dashboardLight.png"
+                  alt="Dashboard"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Dashboard</h3>
+                <p class="text-sm">
+                  Amazing admin dashboard template for modern web applications.
+                </p>
+              </div>
+            </a>
+            <!-- analytics -->
+            <a href="../main/analytics.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/lightPage/analyticsLight.png"
+                  alt="Analytics"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Analytics</h3>
+                <p class="text-sm">
+                  Check your card details and manage your cards easily.
+                </p>
+              </div>
+            </a>
+            <!-- transactions -->
+            <a
+              href="../main/transaction.html"
+              target="_blank"
+              class="lightPages"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/transactionLight.png"
+                  alt="Transactions"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Transactions</h3>
+                <p class="text-sm">
+                  View and manage your transaction history with ease.
+                </p>
+              </div>
+            </a>
+            <!-- wallets -->
+            <a href="../main/wallets.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/analyticsLight.png"
+                  alt="Wallets"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Wallets</h3>
+                <p class="text-sm">
+                  Set and track your financial goals effectively.
+                </p>
+              </div>
+            </a>
+            <!-- exchange -->
+            <a href="../main/exchange.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/lightPage/exchangeLight.png"
+                  alt="Exchange"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Exchange</h3>
+                <p class="text-sm">Exchange your currency with ease.</p>
+              </div>
+            </a>
+            <!-- payments -->
+            <a href="../main/payments.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/paymentsLight.png"
+                  alt="Payments"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Payments</h3>
+                <p class="text-sm">Make payments with ease.</p>
+              </div>
+            </a>
+            <!-- payment links -->
+            <a
+              href="../main/paymentslink.html"
+              target="_blank"
+              class="lightPages"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/paymentlinksLight.png"
+                  alt="Payment Links"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Payment Links</h3>
+                <p class="text-sm">
+                  Create and manage payment links to control your spending.
+                </p>
+              </div>
+            </a>
+            <!-- customer list -->
+            <a
+              href="../main/customerlist.html"
+              target="_blank"
+              class="lightPages"
+            >
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/lightPage/customerlistLight.png"
+                  alt="Customer List"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Customer List</h3>
+                <p class="text-sm">
+                  View and manage your customer list with ease.
+                </p>
+              </div>
+            </a>
+            <!-- new customer list -->
+            <a
+              href="../main/newcustomer.html"
+              target="_blank"
+              class="lightPages"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/newcustomerlistLight.png"
+                  alt="New Customer"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">New Customer</h3>
+                <p class="text-sm">Add new customers to your customer list.</p>
+              </div>
+            </a>
+            <!-- invoices -->
+            <a href="../main/invoice.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/invoiceLight.png"
+                  alt="Invoice"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Invoice</h3>
+                <p class="text-sm">View and manage your invoices with ease.</p>
+              </div>
+            </a>
+            <!-- products -->
+            <a href="../main/products.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/lightPage/productsLight.png"
+                  alt="Products"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Products</h3>
+                <p class="text-sm">View and manage your products with ease.</p>
+              </div>
+            </a>
+            <!-- connections -->
+            <a
+              href="../main/connections.html"
+              target="_blank"
+              class="lightPages"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/connectionLight.png"
+                  alt="Connections"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Connections</h3>
+                <p class="text-sm">
+                  Read article and learn about the latest trends.
+                </p>
+              </div>
+            </a>
+            <!-- people -->
+            <a href="../main/people.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/peopleLight.png"
+                  alt="Login"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">People</h3>
+                <p class="text-sm">Manage whom with you connected</p>
+              </div>
+            </a>
+            <!-- settings -->
+            <a href="../main/setting.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/settingLight.png"
+                  alt="Register"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Settings</h3>
+                <p class="text-sm">Manage your account settings.</p>
+              </div>
+            </a>
+
+            <!-- login -->
+            <a href="../main/loginpage.html" target="_blank" class="lightPages">
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/loginpageLight.png"
+                  alt="Login"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Login</h3>
+                <p class="text-sm">Login to your account.</p>
+              </div>
+            </a>
+
+            <!-- registration -->
+            <a
+              href="../main/registration.html"
+              target="_blank"
+              class="lightPages"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/lightPage/registrationLight.png"
+                  alt="Register"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Registration</h3>
+                <p class="text-sm">Register to your account.</p>
+              </div>
+            </a>
+
+            <!-- for dark page -->
+            <!-- dashboard -->
+            <a
+              href="../main/index.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/dashboarDark.png"
+                  alt="Dashboard"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Dashboard</h3>
+                <p class="text-sm">
+                  Amazing admin dashboard template for modern web applications.
+                </p>
+              </div>
+            </a>
+            <!-- analytics -->
+            <a
+              href="../main/analytics.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/darkPage/analyticsDark.png"
+                  alt="Analytics"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Analytics</h3>
+                <p class="text-sm">
+                  Check your card details and manage your cards easily.
+                </p>
+              </div>
+            </a>
+            <!-- transactions -->
+            <a
+              href="../main/transaction.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/transactionDark.png"
+                  alt="Transactions"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Transactions</h3>
+                <p class="text-sm">
+                  View and manage your transaction history with ease.
+                </p>
+              </div>
+            </a>
+            <!-- wallets -->
+            <a
+              href="../main/wallets.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/walletsDark.png"
+                  alt="Wallets"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Wallets</h3>
+                <p class="text-sm">
+                  Set and track your financial goals effectively.
+                </p>
+              </div>
+            </a>
+            <!-- exchange -->
+            <a
+              href="../main/exchange.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/darkPage/exchangeDark.png"
+                  alt="Exchange"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Exchange</h3>
+                <p class="text-sm">Exchange your currency with ease.</p>
+              </div>
+            </a>
+            <!-- payments -->
+            <a
+              href="../main/payments.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/paymentsDark.png"
+                  alt="Payments"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Payments</h3>
+                <p class="text-sm">Make payments with ease.</p>
+              </div>
+            </a>
+            <!-- payment links -->
+            <a
+              href="../main/paymentslink.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/paymentlinksDark.png"
+                  alt="Payment Links"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Payment Links</h3>
+                <p class="text-sm">
+                  Create and manage payment links to control your spending.
+                </p>
+              </div>
+            </a>
+            <!-- customer list -->
+            <a
+              href="../main/customerlist.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/darkPage/customerlistDark.png"
+                  alt="Customer List"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Customer List</h3>
+                <p class="text-sm">
+                  View and manage your customer list with ease.
+                </p>
+              </div>
+            </a>
+            <!-- new customer list -->
+            <a
+              href="../main/newcustomer.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/newcustomerlistDark.png"
+                  alt="New Customer"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">New Customer</h3>
+                <p class="text-sm">Add new customers to your customer list.</p>
+              </div>
+            </a>
+            <!-- invoices -->
+            <a
+              href="../main/invoice.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/invoiceDark.png"
+                  alt="Invoice"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Invoice</h3>
+                <p class="text-sm">View and manage your invoices with ease.</p>
+              </div>
+            </a>
+            <!-- products -->
+            <a
+              href="../main/products.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:-rotate-2">
+                <img
+                  src="./assets/images/darkPage/productsDark.png"
+                  alt="Products"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Products</h3>
+                <p class="text-sm">View and manage your products with ease.</p>
+              </div>
+            </a>
+            <!-- connections -->
+            <a
+              href="../main/connections.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/connectionDark.png"
+                  alt="Connections"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Connections</h3>
+                <p class="text-sm">
+                  Read article and learn about the latest trends.
+                </p>
+              </div>
+            </a>
+            <!-- people -->
+            <a
+              href="../main/people.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/peopleDark.png"
+                  alt="Login"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">People</h3>
+                <p class="text-sm">Manage whom with you connected</p>
+              </div>
+            </a>
+            <!-- settings -->
+            <a
+              href="../main/setting.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/settingDark.png"
+                  alt="Settings"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Settings</h3>
+                <p class="text-sm">Manage your account settings.</p>
+              </div>
+            </a>
+
+            <!-- login -->
+            <a
+              href="../main/loginpage.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/loginpageDark.png"
+                  alt="Login"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Login</h3>
+                <p class="text-sm">Login to your account.</p>
+              </div>
+            </a>
+
+            <!-- registration -->
+            <a
+              href="../main/registration.html"
+              target="_blank"
+              class="darkPages hidden"
+            >
+              <div class="card-effect hover:rotate-2">
+                <img
+                  src="./assets/images/darkPage/registrationDark.png"
+                  alt="Registration"
+                />
+              </div>
+              <div
+                class="relative bottom-10 mx-auto max-w-[90%] rounded-xl border border-gray-800 bg-[#1d232a] px-6 py-2"
+              >
+                <h3 class="text-lg font-bold lg:text-xl">Registration</h3>
+                <p class="text-sm">Register to your account.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Ready To Get Started -->
+        <section
+          id="pricing"
+          class="relative mx-auto mb-24 w-full rounded-xl bg-cover bg-center bg-no-repeat py-6 md:h-[45vh] md:py-0"
+          style="
+            background-image: url(&quot;./assets/images/bg-get-started.webp&quot;);
+          "
+        >
+          <!-- Overlay -->
+          <div class="absolute inset-0 rounded-xl bg-white/10"></div>
+          <div class="flex h-full items-center justify-center">
+            <div class="z-50 px-2 text-center sm:px-0">
+              <h2
+                class="animated-gradient bg-linear-to-bl from-violet-500 to-fuchsia-500 bg-clip-text text-center text-4xl font-bold text-transparent"
+              >
+                Ready To Get Started
+              </h2>
+
+              <p class="mx-auto my-6 max-w-md text-center">
+                With Fintrix, building modern, scalable dashboard is a breeze.
+                Enjoy lightning-fast performance and smooth efficiency to bring
+                your project!
+              </p>
+              <div class="flex items-center justify-center">
+                <a
+                  href="https://themeforest.net/user/pixelaxis"
+                  target="_blank"
+                >
+                  <button type="button" class="btn">
+                    <strong>Get Now</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer
+          class="flex items-center justify-between border-t border-gray-800 py-8"
+        >
+          <div class="flex items-center gap-2">
+            <h5 class="text-xs font-bold text-white sm:text-sm md:text-lg">
+              Fintrix
+            </h5>
+          </div>
+          <div>
+            <p class="text-xs sm:text-sm md:text-lg">
+              © 2025 Fintrix. All rights reserved.
+            </p>
+          </div>
+        </footer>
+      </section>
+    </div>
   <script defer src="assets/js/index.js"></script></body>
 </html>
