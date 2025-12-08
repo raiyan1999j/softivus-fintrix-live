@@ -18,51 +18,55 @@
   </head>
   <body class="bg-bg">
     <!-- navbar -->
-    <nav
-      class="sticky top-0 left-0 z-200 flex items-center justify-between bg-transparent px-6 py-4 backdrop-blur-sm"
-    >
-      <!-- Left: Logo + Text -->
-      <div class="flex items-center gap-2">
-        <img src="./assets/images/pagelogo.png" alt="logo" class="size-12" />
-        <h5 class="text-lg font-bold text-white">Fintrix</h5>
-      </div>
-
-      <div id="nav-items" class="hidden md:block">
-        <ul id="nav-items" class="flex items-center gap-2">
-          <a href="#hero"><li class="nav-link">Hero</li></a>
-          <a href="#features"><li class="nav-link">Features</li></a>
-          <a href="#technologies"><li class="nav-link">Technologies</li></a>
-          <a href="#templates"><li class="nav-link">Templates</li></a>
-          <a href="#pricing"><li class="nav-link">Pricing</li></a>
-        </ul>
-      </div>
-
-      <!-- From Uiverse.io by talhabangyal -->
-      <label class="hamburger md:hidden" for="toggle-menu">
-        <input type="checkbox" id="toggle-menu" />
-        <svg viewBox="0 0 32 32">
-          <path
-            class="line line-top-bottom"
-            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-          ></path>
-          <path class="line" d="M7 16 27 16"></path>
-        </svg>
-      </label>
-      <!-- drop down list -->
-
+    <nav class="sticky top-0 left-0 z-200 bg-transparent backdrop-blur-sm">
       <div
-        id="drop-down"
-        class="absolute top-14 right-6 z-100 hidden rounded-xl bg-transparent p-2 backdrop-blur-xs"
+        class="mx-auto flex w-[90%] items-center justify-between py-4 sm:w-[80%] lg:max-w-[70%]"
       >
-        <ul id="drop-down-list" class="-100 space-y-8">
-          <a href="#hero"><li class="dropDown-nav-link">Hero</li></a>
-          <a href="#features"><li class="dropDown-nav-link">Features</li></a>
-          <a href="#technologies"
-            ><li class="dropDown-nav-link">Technologies</li></a
-          >
-          <a href="#templates"><li class="dropDown-nav-link">Templates</li></a>
-          <a href="#pricing"><li class="dropDown-nav-link">Pricing</li></a>
-        </ul>
+        <!-- Left: Logo + Text -->
+        <div class="flex items-center gap-2">
+          <img src="./assets/images/pagelogo.png" alt="logo" class="size-12" />
+          <h5 class="text-lg font-bold text-white">Fintrix</h5>
+        </div>
+
+        <div id="nav-items" class="hidden md:block">
+          <ul id="nav-items" class="flex items-center gap-2">
+            <a href="#hero"><li class="nav-link">Hero</li></a>
+            <a href="#features"><li class="nav-link">Features</li></a>
+            <a href="#technologies"><li class="nav-link">Technologies</li></a>
+            <a href="#templates"><li class="nav-link">Templates</li></a>
+            <a href="#pricing"><li class="nav-link">Pricing</li></a>
+          </ul>
+        </div>
+
+        <!-- From Uiverse.io by talhabangyal -->
+        <label class="hamburger md:hidden" for="toggle-menu">
+          <input type="checkbox" id="toggle-menu" />
+          <svg viewBox="0 0 32 32">
+            <path
+              class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+            ></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+        <!-- drop down list -->
+
+        <div
+          id="drop-down"
+          class="absolute top-14 right-6 z-100 hidden rounded-xl bg-transparent p-2 backdrop-blur-xs"
+        >
+          <ul id="drop-down-list" class="-100 space-y-8">
+            <a href="#hero"><li class="dropDown-nav-link">Hero</li></a>
+            <a href="#features"><li class="dropDown-nav-link">Features</li></a>
+            <a href="#technologies"
+              ><li class="dropDown-nav-link">Technologies</li></a
+            >
+            <a href="#templates"
+              ><li class="dropDown-nav-link">Templates</li></a
+            >
+            <a href="#pricing"><li class="dropDown-nav-link">Pricing</li></a>
+          </ul>
+        </div>
       </div>
     </nav>
 
