@@ -321,9 +321,6 @@
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
-  .top-14 {
-    top: calc(var(--spacing) * 14);
-  }
   .top-20 {
     top: calc(var(--spacing) * 20);
   }
@@ -4193,7 +4190,7 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
-#container-stars {
+#container-stars,#container-stars2 {
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -4245,13 +4242,13 @@ strong {
 .btn:active .circle {
   background: #fe53bb;
 }
-#stars {
+#stars,#stars2 {
   position: relative;
   background: transparent;
   width: 200rem;
   height: 200rem;
 }
-#stars::after {
+#stars::after,#stars2::after {
   content: "";
   position: absolute;
   top: -10rem;
@@ -4260,11 +4257,11 @@ strong {
   height: 100%;
   animation: animStarRotate 90s linear infinite;
 }
-#stars::after {
+#stars::after,#stars2::after {
   background-image: radial-gradient(#ffffff 1px, transparent 1%);
   background-size: 50px 50px;
 }
-#stars::before {
+#stars::before,#stars2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -4273,7 +4270,7 @@ strong {
   height: 500%;
   animation: animStar 60s linear infinite;
 }
-#stars::before {
+#stars::before,#stars2::before {
   background-image: radial-gradient(#ffffff 1px, transparent 1%);
   background-size: 50px 50px;
   opacity: 0.5;
@@ -4319,7 +4316,7 @@ strong {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
-button {
+button,.supportBtn {
   display: flex;
   align-items: center;
   font-family: inherit;
@@ -4334,18 +4331,18 @@ button {
   letter-spacing: 0.05em;
   border-radius: 16px;
 }
-button svg {
+button svg,.supportBtn svg {
   margin-right: 3px;
   transform: rotate(30deg);
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
-button span {
+button span,.supportBtn span {
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
-button:hover svg {
+button:hover svg,.supportBtn:hover svg {
   transform: translateX(5px) rotate(90deg);
 }
-button:hover span {
+button:hover span,.supportBtn:hover span {
   transform: translateX(7px);
 }
 .animated-gradient {
