@@ -1644,6 +1644,9 @@
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
   }
+  .pb-\[calc\(env\(safe-area-inset-bottom\)\+20px\)\]\! {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+  }
   .pl-8 {
     padding-left: calc(var(--spacing) * 8);
   }
@@ -11549,7 +11552,6 @@ body {
   width: 100%;
   border: 1px solid var(--border);
   background: transparent;
-  font-size: 32px;
   font-weight: 700;
   color: var(--text);
   outline: none;
@@ -11566,8 +11568,6 @@ body {
   border-style: var(--tw-border-style);
   border-width: 1px;
   border-color: var(--color-border);
-  padding-inline: calc(var(--spacing) * 2.5);
-  padding-block: calc(var(--spacing) * 1.5);
 }
 .currency-input-group .currency-input,
 .currency-input-group .currency-select,

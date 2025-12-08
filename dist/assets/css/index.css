@@ -1619,6 +1619,9 @@
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
   }
+  .pb-\[calc\(env\(safe-area-inset-bottom\)\+20px\)\]\! {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+  }
   .pl-8 {
     padding-left: calc(var(--spacing) * 8);
   }
