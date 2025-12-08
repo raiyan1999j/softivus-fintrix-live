@@ -216,15 +216,15 @@
         }
 
         .dark-mode .form-input {
-            background: #1e293b;
-            border: 2px solid #334155;
-            color: #f1f5f9;
+            background: var(--bg);
+            border: 2px solid var(--border);
+            color: var(--text);
         }
 
         .dark-mode .form-input:focus {
-            background: #0f172a;
-            border-color: #7c3aed;
-            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+            background: var(--bg);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1);
         }
 
         .form-input::placeholder {
@@ -342,29 +342,17 @@
 
         /* Theme Toggle */
         .theme-toggle {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            @apply fixed top-8 right-8 size-[30px] sm:size-[40px] lg:size-[50px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 ease-in-out z-1000 shadow-lg;
         }
 
         .light-mode .theme-toggle {
-            background: #ffffff;
-            color: #1f2937;
+            background: var(--bg);
+            color: var(--text);
         }
 
         .dark-mode .theme-toggle {
-            background: #1e293b;
-            color: #f1f5f9;
+            background: var(--bg);
+            color: var(--text);
         }
 
         .theme-toggle:hover {
@@ -379,14 +367,14 @@
         }
 
         .footer-link a {
-            color: #667eea;
+            color: var(--primary);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .dark-mode .footer-link a {
-            color: #a78bfa;
+            color: var(--primary);
         }
 
         .footer-link a:hover {

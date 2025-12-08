@@ -30,13 +30,12 @@
 
         <div id="nav-items" class="hidden md:block">
           <ul id="nav-items2" class="flex items-center gap-2">
-  <li class="nav-link"><a href="#hero">Hero</a></li>
-  <li class="nav-link"><a href="#features">Features</a></li>
-  <li class="nav-link"><a href="#technologies">Technologies</a></li>
-  <li class="nav-link"><a href="#templates">Templates</a></li>
-  <li class="nav-link"><a href="#pricing">Pricing</a></li>
-</ul>
-
+            <li class="nav-link"><a href="#hero">Hero</a></li>
+            <li class="nav-link"><a href="#features">Features</a></li>
+            <li class="nav-link"><a href="#technologies">Technologies</a></li>
+            <li class="nav-link"><a href="#templates">Templates</a></li>
+            <li class="nav-link"><a href="#pricing">Pricing</a></li>
+          </ul>
         </div>
 
         <!-- From Uiverse.io by talhabangyal -->
@@ -54,16 +53,19 @@
 
         <div
           id="drop-down"
-          class="absolute top-20 right-6 z-100 hidden rounded-xl border border-gray-800 bg-gray-900 p-2 backdrop-blur-xs w-[90%]"
+          class="absolute top-20 right-6 z-100 hidden w-[90%] rounded-xl border border-gray-800 bg-gray-900 p-2 backdrop-blur-xs"
         >
           <ul id="drop-down-list" class="-100 space-y-8">
-  <li class="dropDown-nav-link"><a href="#hero">Hero</a></li>
-  <li class="dropDown-nav-link"><a href="#features">Features</a></li>
-  <li class="dropDown-nav-link"><a href="#technologies">Technologies</a></li>
-  <li class="dropDown-nav-link"><a href="#templates">Templates</a></li>
-  <li class="dropDown-nav-link"><a href="#pricing">Pricing</a></li>
-</ul>
-
+            <li class="dropDown-nav-link"><a href="#hero">Hero</a></li>
+            <li class="dropDown-nav-link"><a href="#features">Features</a></li>
+            <li class="dropDown-nav-link">
+              <a href="#technologies">Technologies</a>
+            </li>
+            <li class="dropDown-nav-link">
+              <a href="#templates">Templates</a>
+            </li>
+            <li class="dropDown-nav-link"><a href="#pricing">Pricing</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -71,7 +73,7 @@
     <!-- hero section -->
     <section
       id="hero"
-      class="relative mb-24 overflow-hidden px-6 pt-20 lg:pt-32"
+      class="relative mb-24 flex items-center overflow-hidden px-6 pt-20 lg:h-[calc(100vh-65px)] lg:pt-0"
     >
       <!-- ⭐ Background Animation -->
       <canvas
@@ -108,7 +110,7 @@
             class="flex flex-wrap items-center justify-center gap-4 lg:justify-start"
           >
             <!-- Live Demo Button -->
-           <a href="#templates">
+            <a href="#templates">
               <span class="supportBtn">
                 <svg
                   height="24"
@@ -174,7 +176,7 @@
             class="grid grid-cols-1 items-center justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/features.webp"
                   alt="image"
@@ -192,7 +194,7 @@
             </div>
 
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/features-layouts.webp"
                   alt="image"
@@ -207,7 +209,7 @@
               </p>
             </div>
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/features-responsive.webp"
                   alt="image"
@@ -222,7 +224,7 @@
               </p>
             </div>
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/easyInvoice.jpg"
                   alt="image"
@@ -239,7 +241,7 @@
               </p>
             </div>
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/flexiblePayment.jpg"
                   alt="image"
@@ -255,7 +257,7 @@
               </p>
             </div>
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/transactionHistory.jpg"
                   alt="image"
@@ -272,7 +274,7 @@
               </p>
             </div>
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/securityAuth.jpg"
                   alt="image"
@@ -287,7 +289,7 @@
               </p>
             </div>
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/responsiveInterface.jpg"
                   alt="image"
@@ -305,7 +307,7 @@
             </div>
 
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/notificationAlert.jpg"
                   alt="image"
@@ -321,7 +323,7 @@
             </div>
 
             <div class="feature-card">
-              <div class="h-[248px] w-full rounded-xl overflow-hidden">
+              <div class="h-[248px] w-full overflow-hidden rounded-xl">
                 <img
                   src="./assets/images/integration.jpg"
                   alt="image"
@@ -1123,18 +1125,21 @@
                 your project!
               </p>
               <div class="flex items-center justify-center">
-                <a href="https://themeforest.net/user/pixelaxis" target="_blank">
-              <span class="btn">
-                <strong>Get Now</strong>
-                <span id="container-stars2" class="block">
-                  <span id="stars2" class="block"></span>
-                </span>
-                <span id="glow2" class="block">
-                  <span class="circle block"></span>
-                  <span class="circle block"></span>
-                </span>
-              </span>
-            </a>
+                <a
+                  href="https://themeforest.net/user/pixelaxis"
+                  target="_blank"
+                >
+                  <span class="btn">
+                    <strong>Get Now</strong>
+                    <span id="container-stars2" class="block">
+                      <span id="stars2" class="block"></span>
+                    </span>
+                    <span id="glow2" class="block">
+                      <span class="circle block"></span>
+                      <span class="circle block"></span>
+                    </span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -1145,13 +1150,13 @@
           class="flex items-center justify-between border-t border-gray-800 py-8"
         >
           <div class="flex items-center gap-2">
-            <h5 class="text-xs font-bold text-white sm:text-sm md:text-lg">
+            <a href="../main/index.html" class="text-xs font-bold text-white sm:text-sm md:text-lg">
               Fintrix
-            </h5>
+            </a>
           </div>
           <div>
             <p class="text-xs sm:text-sm md:text-lg">
-              © 2025 Fintrix. All rights reserved.
+              © 2025 <a href="https://themeforest.net/user/pixelaxis" target="_blank">pixelaxis</a>. All rights reserved.
             </p>
           </div>
         </footer>
