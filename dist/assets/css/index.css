@@ -414,9 +414,6 @@
   .order-2 {
     order: 2;
   }
-  .order-3 {
-    order: 3;
-  }
   .order-first {
     order: -9999;
   }
@@ -1655,9 +1652,6 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
-  }
-  .pb-\[calc\(env\(safe-area-inset-bottom\)\+20px\)\]\! {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
   }
   .pb-\[calc\(env\(safe-area-inset-bottom\)\+80px\)\]\! {
     padding-bottom: calc(env(safe-area-inset-bottom) + 80px) !important;
@@ -3454,11 +3448,6 @@
       display: flex;
     }
   }
-  .lg\:flex\! {
-    @media (width >= 64rem) {
-      display: flex !important;
-    }
-  }
   .lg\:hidden\! {
     @media (width >= 64rem) {
       display: none !important;
@@ -3572,11 +3561,6 @@
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
-    }
-  }
-  .lg\:flex-row\! {
-    @media (width >= 64rem) {
-      flex-direction: row !important;
     }
   }
   .lg\:items-center {
