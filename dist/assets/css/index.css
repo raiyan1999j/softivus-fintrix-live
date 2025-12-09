@@ -3620,11 +3620,6 @@
       row-gap: calc(var(--spacing) * 5);
     }
   }
-  .lg\:gap-y-10 {
-    @media (width >= 64rem) {
-      row-gap: calc(var(--spacing) * 10);
-    }
-  }
   .lg\:rounded-2xl\! {
     @media (width >= 64rem) {
       border-radius: var(--radius-2xl) !important;
