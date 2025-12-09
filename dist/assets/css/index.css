@@ -1659,6 +1659,9 @@
   .pb-\[calc\(env\(safe-area-inset-bottom\)\+20px\)\]\! {
     padding-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
   }
+  .pb-\[calc\(env\(safe-area-inset-bottom\)\+80px\)\]\! {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 80px) !important;
+  }
   .pl-8 {
     padding-left: calc(var(--spacing) * 8);
   }
@@ -3016,6 +3019,11 @@
       margin-bottom: calc(var(--spacing) * 5);
     }
   }
+  .md\:mb-6 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 6);
+    }
+  }
   .md\:ml-0 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * 0);
@@ -3601,11 +3609,6 @@
       gap: calc(var(--spacing) * 6);
     }
   }
-  .lg\:gap-12 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 12);
-    }
-  }
   .lg\:space-y-6 {
     @media (width >= 64rem) {
       :where(& > :not(:last-child)) {
@@ -3683,6 +3686,11 @@
   .lg\:pb-0 {
     @media (width >= 64rem) {
       padding-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:pb-\[calc\(env\(safe-area-inset-bottom\)\+20px\)\]\! {
+    @media (width >= 64rem) {
+      padding-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
     }
   }
   .lg\:text-left {
